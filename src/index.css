@@ -1,0 +1,165 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+@layer base {
+  :root {
+    /* Brand colors */
+    --brand-primary: 220 14% 96%;       /* Cinza claro */
+    --brand-secondary: 220 13% 91%;     /* Cinza médio */
+    --brand-accent: 262 83% 58%;        /* Roxo */
+    --brand-dark: 224 71% 4%;           /* Preto azulado */
+    --brand-text: 215 28% 17%;          /* Cinza escuro */
+    --brand-success: 142 76% 36%;       /* Verde */
+    --brand-warning: 32 95% 44%;        /* Laranja */
+
+    /* Semantic tokens */
+    --background: 0 0% 100%;
+    --foreground: var(--brand-text);
+    --card: 0 0% 100%;
+    --card-foreground: var(--brand-text);
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--brand-text);
+    --primary: var(--brand-accent);
+    --primary-foreground: 210 40% 98%;
+    --secondary: var(--brand-secondary);
+    --secondary-foreground: var(--brand-text);
+    --muted: var(--brand-primary);
+    --muted-foreground: 215 16% 47%;
+    --accent: var(--brand-accent);
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: var(--brand-secondary);
+    --input: var(--brand-secondary);
+    --ring: var(--brand-accent);
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-accent)) 0%, hsl(var(--brand-accent)/0.8) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 50%, hsl(var(--brand-accent)/0.1) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(var(--brand-primary)) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply font-medium leading-tight;
+  }
+}
+
+@layer components {
+  /* Hero button style */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-primary/80 
+           text-primary-foreground font-semibold px-8 py-4 rounded-full 
+           shadow-lg hover:shadow-xl transition-all duration-300 
+           hover:scale-105 hover:from-primary/90 hover:to-primary/70
+           focus:ring-4 focus:ring-primary/30 focus:outline-none;
+  }
+  
+  /* Primary button */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground 
+           font-medium px-6 py-3 rounded-xl
+           hover:bg-primary/90 transition-colors duration-200
+           focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:outline-none;
+  }
+  
+  /* Secondary button */
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground 
+           font-medium px-6 py-3 rounded-xl
+           hover:bg-secondary/80 transition-all duration-200
+           focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:outline-none;
+  }
+  
+  /* Card styling */
+  .card-custom {
+    @apply bg-card border border-border rounded-2xl shadow-sm
+           hover:shadow-md transition-shadow duration-200;
+  }
+  
+  /* Gradient backgrounds */
+  .bg-primary-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Loading spinner */
+  .spinner {
+    @apply w-8 h-8 border-4 border-muted border-t-primary rounded-full animate-spin;
+  }
+  
+  /* Price styling */
+  .price-tag {
+    @apply text-2xl font-bold text-primary font-mono;
+  }
+  
+  /* Badge styling */
+  .badge-custom {
+    @apply bg-accent text-accent-foreground 
+           px-3 py-1 rounded-full text-xs font-medium;
+  }
+}
+
+/* Custom animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-custom {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.animate-pulse-custom {
+  animation: pulse-custom 2s infinite;
+}

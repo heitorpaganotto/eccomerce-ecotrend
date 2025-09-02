@@ -1,0 +1,116 @@
+
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camiseta Essencial Premium",
+      "category": "roupas",
+      "price": 89.90,
+      "originalPrice": 120.00,
+      "image": "/api/placeholder/400/400",
+      "description": "Camiseta 100% algodão premium, com tingimento especial. Produção de alta qualidade.",
+      "sustainable": true,
+      "inStock": true,
+      "rating": 4.8,
+      "reviews": 127
+    },
+    {
+      "id": 2,
+      "name": "Shampoo Sólido Natural",
+      "category": "beleza",
+      "price": 45.90,
+      "originalPrice": null,
+      "image": "/api/placeholder/400/400",
+      "description": "Shampoo sólido livre de sulfatos e parabenos, com óleos essenciais de lavanda e tea tree.",
+      "sustainable": true,
+      "inStock": true,
+      "rating": 4.9,
+      "reviews": 89
+    },
+    {
+      "id": 3,
+      "name": "Garrafa Térmica Premium",
+      "category": "casa",
+      "price": 129.90,
+      "originalPrice": 179.90,
+      "image": "/api/placeholder/400/400",
+      "description": "Garrafa térmica isolada com corpo resistente. Mantém temperatura por 12h.",
+      "sustainable": true,
+      "inStock": true,
+      "rating": 4.7,
+      "reviews": 203
+    },
+    {
+      "id": 4,
+      "name": "Power Bank Solar",
+      "category": "tecnologia",
+      "price": 199.90,
+      "originalPrice": 249.90,
+      "image": "/api/placeholder/400/400",
+      "description": "Carregador portátil com painel solar integrado. Energia limpa para seus dispositivos.",
+      "sustainable": true,
+      "inStock": true,
+      "rating": 4.6,
+      "reviews": 156
+    },
+    {
+      "id": 5,
+      "name": "Jeans Comfort Premium",
+      "category": "roupas",
+      "price": 189.90,
+      "originalPrice": 250.00,
+      "image": "/api/placeholder/400/400",
+      "description": "Calça jeans premium com tecido especial e fibras de alta qualidade. Corte moderno.",
+      "sustainable": true,
+      "inStock": false,
+      "rating": 4.5,
+      "reviews": 94
+    },
+    {
+      "id": 6,
+      "name": "Kit Cuidados Faciais Premium",
+      "category": "beleza",
+      "price": 159.90,
+      "originalPrice": null,
+      "image": "/api/placeholder/400/400",
+      "description": "Kit completo com limpador, tônico e hidratante facial. Fórmulas especiais e de alta qualidade.",
+      "sustainable": true,
+      "inStock": true,
+      "rating": 4.9,
+      "reviews": 234
+    },
+    {
+      "id": 7,
+      "name": "Conjunto de Utensílios Premium",
+      "category": "casa",
+      "price": 79.90,
+      "originalPrice": null,
+      "image": "/api/placeholder/400/400",
+      "description": "Set de utensílios para cozinha de alta qualidade: colheres, garfo, faca e pauzinhos com estojo.",
+      "sustainable": true,
+      "inStock": true,
+      "rating": 4.4,
+      "reviews": 78
+    },
+    {
+      "id": 8,
+      "name": "Fones Bluetooth Premium",
+      "category": "tecnologia",
+      "price": 299.90,
+      "originalPrice": 399.90,
+      "image": "/images/tecnologia/airpods-pro-2.jpeg",
+      "description": "Fones de ouvido bluetooth com case de material premium. Qualidade de áudio superior.",
+      "sustainable": true,
+      "inStock": true,
+      "rating": 4.8,
+      "reviews": 167
+    }
+  ],
+  "categories": [
+    { "id": "all", "name": "Todos os produtos", "icon": "🏷️" },
+    { "id": "roupas", "name": "Roupas & Moda", "icon": "👕" },
+    { "id": "beleza", "name": "Beleza & Cuidados", "icon": "🧴" },
+    { "id": "casa", "name": "Casa & Decoração", "icon": "🏠" },
+    { "id": "tecnologia", "name": "Tecnologia", "icon": "📱" }
+  ]
+}
